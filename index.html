@@ -1,1 +1,64 @@
-// Dummy content for public/index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Neuron Clash - Science Quiz</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #111;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+    h1 {
+      color: #33ffcc;
+    }
+    .question-box {
+      background: #222;
+      padding: 20px;
+      border-radius: 8px;
+      width: 300px;
+      text-align: center;
+      box-shadow: 0 0 15px #33ffcc55;
+    }
+    button {
+      margin: 10px 0;
+      padding: 10px;
+      background: #33ffcc;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <h1>Neuron Clash 🧠</h1>
+  <div class="question-box" id="quiz">
+    <p id="question">What does DNA stand for?</p>
+    <button onclick="answer('A')">A. DeoxyriboNucleic Acid</button>
+    <button onclick="answer('B')">B. Dynamic Neural Array</button>
+    <button onclick="answer('C')">C. Digital Node Algorithm</button>
+    <p id="result"></p>
+  </div>
+
+  <script>
+    function answer(option) {
+      const result = document.getElementById("result");
+      if (option === "A") {
+        result.textContent = "✅ Correct!";
+        result.style.color = "#33ffcc";
+      } else {
+        result.textContent = "❌ Incorrect!";
+        result.style.color = "#ff3366";
+      }
+    }
+  </script>
+</body>
+</html>
